@@ -1,0 +1,57 @@
+body {
+  font-family: sans-serif;
+  margin: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 20px;
+}
+
+input[type=text] {
+  width: 4em;
+  text-align: right;
+  border: 0;
+  border-bottom: 1px solid #666;
+  font-family: inherit;
+  font-size: inherit;
+  outline: none;
+}
+
+.rate {
+  color: #666;
+  margin-left: 10px;
+}
+
+.label {
+  display: inline-block;
+  width: 90px;
+  text-align: right;
+  margin-right: 1em;
+  font-weight: bold;
+}
+
+.converted {
+  border-top: 1px solid black;
+  padding-top: 10px;
+}
+
+.modifier {
+  margin-left: 10px;
+  border: 1px solid black;
+}
+
+.reset {
+  display: block;
+  margin: auto;
+  margin-top: 1em;
+  text-decoration: underline;
+  border: 0;
+}
+
+.modifier,
+.reset {
+  font-family: inherit;
+  font-size: inherit;
+  background-color: transparent;
+}
