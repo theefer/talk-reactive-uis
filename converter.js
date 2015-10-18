@@ -10,6 +10,10 @@ import {renderToDom} from './rx-dom';
 const h$ = container$;
 
 
+// Simple flag to hide [+] [-]
+const showIncDec = window.location.hash !== '#no-inc-dec';
+
+
 const rates = {
   'EUR': 1.36,
   'JPY': 184,
@@ -109,14 +113,14 @@ function view() {
             oninput: sink$(events.amountChanged$)
           })),
           ' GBP',
-          h('button.modifier', {
+          showIncDec && h('button.modifier', {
             type: 'button',
             onclick: sink$(events.incrementClicked$)
-          }, '+'),
-          h('button.modifier', {
+          }, '+') || '',
+          showIncDec && h('button.modifier', {
             type: 'button',
             onclick: sink$(events.decrementClicked$)
-          }, '-')
+          }, '-') || ''
         ]),
         h$('label', [
           h('span.label', 'Currency'),
