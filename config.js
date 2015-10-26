@@ -3,9 +3,27 @@ System.config({
   defaultJSExtensions: true,
   transpiler: "traceur",
   paths: {
+    "app/*": "./*",
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
   },
+  packages: {
+    app: {
+      defaultExtension: "js",
+      meta: {
+        "*.ts": {
+          loader: "ts"
+        }
+      }
+    }
+  },
+  typescriptOptions: {
+    "noImplicitAny": true,
+    "typeCheck": true,              // also accepts "strict"
+    "tsconfig": true,               // also accepts a path
+    "resolveAmbientRefs": true
+  },
+
 
   map: {
     "dom-delegator": "npm:dom-delegator@13.1.0",
@@ -13,8 +31,12 @@ System.config({
     "rx": "npm:rx@4.0.6",
     "traceur": "github:jmcriffey/bower-traceur@0.0.91",
     "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.91",
+    "ts": "github:frankwallis/plugin-typescript@2.1.2",
     "vdom-virtualize": "npm:vdom-virtualize@1.0.0",
     "virtual-dom": "npm:virtual-dom@2.1.1",
+    "github:frankwallis/plugin-typescript@2.1.2": {
+      "typescript": "npm:typescript@1.6.2"
+    },
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
     },

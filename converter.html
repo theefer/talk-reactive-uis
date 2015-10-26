@@ -8,7 +8,7 @@
   <script src="config.js"></script>
 
   <script>
-    System.import("converter").catch(function(error) {
+    System.import("app/converter.ts").catch(function(error) {
       setTimeout(function() { throw error; });
     });
   </script>

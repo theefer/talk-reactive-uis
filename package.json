@@ -16,6 +16,7 @@
     "dependencies": {
       "hyperscript-helpers": "npm:hyperscript-helpers@^2.0.1",
       "rx": "npm:rx@^4.0.6",
+      "ts": "github:frankwallis/plugin-typescript@^2.1.2",
       "vdom-virtualize": "npm:vdom-virtualize@^1.0.0",
       "virtual-dom": "npm:virtual-dom@^2.1.1"
     },
